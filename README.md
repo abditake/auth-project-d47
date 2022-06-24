@@ -1,17 +1,17 @@
 # LAB - Class 09
 
-## Project: Auth Project 
+## Project: Auth Project
 
 ### Author: Katharine Swilley and Andrew Schiller
 
-### Problem Domain  
+### Problem Domain
 
-
+Create a new application using your API Server and Authentication System
 
 ### Links and Resources
 
 - [ci/cd] (GitHub Actions)
-- [back-end server]() 
+- [back-end server]()
 
 ### Setup
 
@@ -37,3 +37,7 @@ Specific routes to hit
 #### Tests
 
 - Run tests using `npm test`
+
+#### UML
+
+![Lab 9 UML](./lab09-UML.png)
