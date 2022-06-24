@@ -2,8 +2,9 @@
 
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const { DataTypes } = require('sequelize/types');
+
 //SECRET
+const SECRET = process.env.SECRET || 'secretstring';
 
 module.exports = (sequelize, DataTypes) => {
   const users = sequelize.define('Users', {
@@ -43,4 +44,29 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
   });
-}
+
+  users.beforeCreate(async (user) => {
+    let hashedPass = await bcrypt.hash(user.password, 10);
+    user.password = hashedPass;
+  });
+
+  users.authenticateBasic = async function (username, password) {
+    const user = await this.findOne({ where: { username } });
+    const valid = await bcrypt.compare(password, user.password);
+    if (valid) { return user; }
+    throw new Error('Invalid User');
+  };
+
+  users.authenticateToken = async function (token) {
+    try {
+      const parsedToken = jwt.verify(token, SECRET);
+      const user = this.findOne( { where: { username: parsedToken.username } });
+      if (user) { return user; }
+      throw new Error('User Not Found');
+    } catch (e) {
+      throw new Error(e.message);
+    }
+  };
+  console.log('USERS:', users);
+  return users;
+};

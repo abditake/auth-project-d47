@@ -21,7 +21,7 @@ const sequelize = new Sequelize(DATABASE_URL, DATABASE_CONFIG);
 
 module.exports = {
   sequelize,
-  Users: usersSchema(sequelize, DataTypes),
-  Flavors: flavorSchema(sequelize, DataTypes),
-  Toppings: toppingsSchema(sequelize, DataTypes),
+  users: usersSchema(sequelize, DataTypes),
+  flavors: flavorSchema(sequelize, DataTypes),
+  toppings: toppingsSchema(sequelize, DataTypes),
 };
