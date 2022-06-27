@@ -19,7 +19,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:config": "sequelize init:config",
+    "db:create": "sequelize db:create"
   },
   "repository": {
     "type": "git",
