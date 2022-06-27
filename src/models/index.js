@@ -6,7 +6,7 @@ const flavorSchema = require('./flavors');
 const toppingsSchema = require('./toppings');
 const usersSchema = require('./users');
 
-const DATABASE_URL = process.env.NODE_ENV === 'test' ? 'sqlite::memory' : 'sqlite:memory';
+const DATABASE_URL = process.env.NODE_ENV === 'test' ? 'sqlite::memory' : 'postgres://localhost:5432/auth-project-d47';
 
 const DATABASE_CONFIG = process.env.NODE_ENV === 'production' ? {
   dialectOptions: {

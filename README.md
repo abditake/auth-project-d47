@@ -11,7 +11,7 @@ Create a new application using your API Server and Authentication System
 ### Links and Resources
 
 - [ci/cd] (GitHub Actions)
-- [back-end server]()
+- [back-end server](https://auth-project-d47.herokuapp.com/)
 
 ### Setup
 
