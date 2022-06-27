@@ -6,18 +6,18 @@ const flavorSchema = require('./flavors');
 const toppingsSchema = require('./toppings');
 const usersSchema = require('./users');
 
-const DATABASE_URL = process.env.NODE_ENV === 'test' ? 'sqlite::memory' : 'postgres://localhost:5432/auth-project-d47';
+const DATABASE_URL = process.env.NODE_ENV === 'test' ? 'sqlite::memory' : process.env.DATABASE_URL || 'postgres://localhost:5432/auth-project-d47';
 
-const DATABASE_CONFIG = process.env.NODE_ENV === 'production' ? {
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false,
-    },
-  },
-} : {};
+// const DATABASE_CONFIG = process.env.NODE_ENV === 'production' ? {
+//   dialectOptions: {
+//     ssl: {
+//       require: true,
+//       rejectUnauthorized: false,
+//     },
+//   },
+// } : {};
 
-const sequelize = new Sequelize(DATABASE_URL, DATABASE_CONFIG);
+const sequelize = new Sequelize(DATABASE_URL);
 
 module.exports = {
   sequelize,
