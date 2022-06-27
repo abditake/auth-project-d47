@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "base-64": "^1.0.0",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.18.0",
+    "express": "^4.18.1",
+    "jest": "^28.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.3",
+    "postgres": "^3.2.4",
+    "sequelize": "^6.21.0",
+    "sequelize-cli": "^6.4.1",
+    "sqlite3": "^5.0.8",
+    "supertest": "^6.2.3"
+  },
+  "name": "auth-project-d47",
+  "description": "## Project: Auth Project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kath-a-rine/auth-project-d47.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kath-a-rine/auth-project-d47/issues"
+  },
+  "homepage": "https://github.com/kath-a-rine/auth-project-d47#readme"
+}
