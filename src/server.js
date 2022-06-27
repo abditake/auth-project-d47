@@ -2,8 +2,8 @@
 
 const express = require('express');
 
-// const handler404 = require('./error-handlers/404');
-// const handler500 = require('./error-handlers/500');
+const handler404 = require('./error-handlers/404');
+const handler500 = require('./error-handlers/500');
 const routes = require('./routes');
 const authRoutes = require('./authRoutes');
 
@@ -17,8 +17,8 @@ app.use(routes);
 app.use(authRoutes);
 
 //catchalls
-// app.use(handler404);
-// app.use(handler500);
+app.use(handler404);
+app.use(handler500);
 
 module.exports = {
   server: app,

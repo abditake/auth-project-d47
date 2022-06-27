@@ -7,9 +7,8 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       unique: true,
     },
-    dairy: {
-      type: DataTypes.ENUM,
-      values: ['dairy', 'non-dairy'],
+    allergens: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
   });
