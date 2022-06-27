@@ -5,7 +5,7 @@ const express = require('express');
 const handler404 = require('./error-handlers/404');
 const handler500 = require('./error-handlers/500');
 const routes = require('./routes');
-const authRoutes = require('./authRoutes');
+const authRoutes = require('./auth/authRoutes');
 
 const app = express();
 
